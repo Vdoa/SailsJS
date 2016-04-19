@@ -26,12 +26,14 @@ module.exports = {
   		type : 'date'
   	},
   		brojMjesta : {
-  		type :'integer',
+  		type: 'string',
+		integer:true,
   		defaultsTo: 4
   		
   	},
   	 	kilometraza: {
-  		type: 'integer'
+  		type: 'string',
+		integer:true
   	},
   		prenos: {
   		type: 'string',
@@ -45,11 +47,22 @@ module.exports = {
       	required: true
   	},
   		kubikaza: {
-  		type: 'integer',
-       	required: true
-
-  	}
-
+  		type: 'string',
+		integer:true
+		
+    },
+  		rented: {
+  		type: 'string',
+		integer:true,
+		defaultsTo: 0
+  	},
+  	    userOwner:{
+        model: 'user'
+		
+    },
+  	    shopOwner:{
+        model: 'shop'
+	}
 
 
 

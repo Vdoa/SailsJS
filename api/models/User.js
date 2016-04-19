@@ -48,7 +48,11 @@ module.exports = {
   		type: 'string',
   		enum:['Albanija', 'Bosna', 'Srbija', 'Makedonija','Hrvatska'] 
 
-  	}
+  	},
+  	automobili:{
+          collection: 'automobil',
+          via: 'userOwner'
+      }
   }
 };
 
