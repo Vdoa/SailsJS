@@ -7,52 +7,56 @@
 
 module.exports = {
 
-  attributes: {
-  	firstName : {
-  		type :'string',
-  		required: true
-  	},
-  	lastName : {
-  		type :'string',
-  		required: true
-  	},
-  	birthDate : {
-  		type : 'date',
-  		required: true	
-  	},
-  	username : {
-  		type :'string',
-  		required: true,
-  		alphanumeric : true,
-  		maxLength: 20,
-  		unique: true
-  	},
-  	 	email: {
-  		type: 'string',
-  		email: true,
-  		required: true,
-      	unique: true
-  	},
-  		gender: {
-  		type: 'string',
-  		enum:['Male', 'Female', 'Other'],
-      	required: true
+	attributes: {
+		firstName: {
+			type: 'string',
+			required: true
+		},
+		lastName: {
+			type: 'string',
+			required: true
+		},
+		birthDate: {
+			type: 'date',
+			required: true
+		},
+		username: {
+			type: 'string',
+			required: true,
+			alphanumeric: true,
+			maxLength: 20,
+			unique: true
+		},
+		email: {
+			type: 'string',
+			email: true,
+			required: true,
+			unique: true
+		},
+		gender: {
+			type: 'string',
+			enum: ['Male', 'Female', 'Other'],
+			required: true
 
-  	},
-  	  	image: {
-  		type: 'string',
-  		defaultsTo: 'http://worldartsme.com/faceless-people-clipart.html#gal_post_83148_faceless-people-clipart-1.jpg'
+		},
+		image: {
+			type: 'string',
+			defaultsTo: 'http://worldartsme.com/faceless-people-clipart.html#gal_post_83148_faceless-people-clipart-1.jpg'
 
-  	},
-  	  	country: {
-  		type: 'string',
-  		enum:['Albanija', 'Bosna', 'Srbija', 'Makedonija','Hrvatska'] 
+		},
+		country: {
+			type: 'string',
+			enum: ['Albanija', 'Bosna', 'Srbija', 'Makedonija', 'Hrvatska']
 
-  	},
-  	automobili:{
-          collection: 'automobil',
-          via: 'userOwner'
-      }
-  }
+		},
+		automobili: {
+			collection: 'automobil',
+			via: 'userOwner'
+		},
+		user_balance: {
+			collection: 'balance',
+			via: 'userOwner'
+		}
+	}
 };
 

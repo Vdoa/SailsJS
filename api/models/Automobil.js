@@ -53,9 +53,17 @@ module.exports = {
     },
   		rented: {
   		type: 'string',
-		integer:true,
-		defaultsTo: 0
+		integer:true
   	},
+   		rentPrice: {
+  		type: 'float',
+  		required: true
+		
+    },
+   		price: {
+  		type: 'float',
+  		required: true
+	},
   	    userOwner:{
         model: 'user'
 		

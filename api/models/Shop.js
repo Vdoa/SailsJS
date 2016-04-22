@@ -7,21 +7,25 @@
 
 module.exports = {
 
-  attributes: {
-	  name : {
-  		type :'string',
-  		required: true
-  	},
+	attributes: {
+		name: {
+			type: 'string',
+			required: true
+		},
 
-		location : {
-  		type :'string',
-  		required: true
+		location: {
+			type: 'string',
+			required: true
 
-  },
-  	shop_auto:{
-          collection: 'automobil',
+		},
+		shop_auto: {
+			collection: 'automobil',
+			via: 'shopOwner'
+		},
+  		shop_balance:{
+          collection: 'balance',
           via: 'shopOwner'
       }
- }
+	}
 };
 
